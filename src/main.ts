@@ -24,3 +24,18 @@ function isPalindrome(maChaine: string): boolean {
   }
   return true 
 }
+
+//Solution de Thomas
+function isPalindrome2(maChaine: string): boolean {
+  const lengthMaChaine = maChaine.length;
+  let index = 0 ;
+
+  while (index < lengthMaChaine-1-index && maChaine[index] === maChaine[lengthMaChaine-1-index]) {
+    index++;
+  }
+
+  return index >= lengthMaChaine-1-index
+}
+
+console.log('isPalindrome', isPalindrome2('kayakds'))
+console.log('isPalindrome', isPalindrome2('kayak')) 
